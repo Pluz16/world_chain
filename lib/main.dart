@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'select_country_screen.dart'; // Importiamo la schermata che implementeremo per la selezione del paese
+import 'player_setup_screen.dart'; // Assicurati che sia importato correttamente
 
 void main() {
   runApp(const MyApp());
@@ -40,15 +40,15 @@ class MyHomePage extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Naviga alla schermata di selezione del paese
+                // Naviga alla schermata di configurazione giocatori
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const SelectCountryScreen(),
+                    builder: (context) => const PlayerSetupScreen(),
                   ),
                 );
               },
-              child: const Text('Seleziona Stato e Inizia'),
+              child: const Text('Configura Giocatori e Inizia'),
             ),
           ],
         ),
