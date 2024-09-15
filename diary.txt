@@ -1,0 +1,6 @@
+Diario di bordo
+
+World_chain
+
+15/09/2024
+Creiamo una schermata principale che permetta ai giocatori di selezionare uno stato (paese) su una mappa dell'Europa e di iniziare a giocare. Ogni stato avrà delle città da cui i giocatori potranno iniziare. Procediamo gradualmente costruendo prima l'interfaccia base.
