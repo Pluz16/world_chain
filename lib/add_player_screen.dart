@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'select_country_screen.dart'; // Importiamo la schermata per selezionare il paese
 
 class AddPlayerScreen extends StatefulWidget {
-  const AddPlayerScreen({Key? key}) : super(key: key);
+  const AddPlayerScreen({super.key});
 
   @override
   _AddPlayerScreenState createState() => _AddPlayerScreenState();

@@ -3,7 +3,7 @@ import 'add_player_screen.dart'; // Importiamo la schermata per aggiungere gioca
 import 'game_screen.dart'; // Importiamo la schermata di gioco
 
 class PlayerSetupScreen extends StatefulWidget {
-  const PlayerSetupScreen({Key? key}) : super(key: key);
+  const PlayerSetupScreen({super.key});
 
   @override
   _PlayerSetupScreenState createState() => _PlayerSetupScreenState();

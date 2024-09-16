@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SelectCountryScreen extends StatelessWidget {
-  const SelectCountryScreen({Key? key}) : super(key: key);
+  const SelectCountryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

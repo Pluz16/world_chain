@@ -4,7 +4,7 @@ import 'player_setup_screen.dart'; // Importa se necessario
 class GameScreen extends StatelessWidget {
   final List<Player> players;
 
-  const GameScreen({Key? key, required this.players}) : super(key: key);
+  const GameScreen({super.key, required this.players});
 
   @override
   Widget build(BuildContext context) {
