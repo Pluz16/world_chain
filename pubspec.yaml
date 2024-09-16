@@ -19,5 +19,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/europe.svg
+    - assets/europe_map.svg
 
