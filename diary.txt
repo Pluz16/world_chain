@@ -4,3 +4,39 @@ World_chain
 
 15/09/2024
 Creiamo una schermata principale che permetta ai giocatori di selezionare uno stato (paese) su una mappa dell'Europa e di iniziare a giocare. Ogni stato avrà delle città da cui i giocatori potranno iniziare. Procediamo gradualmente costruendo prima l'interfaccia base.
+
+16/09
+Roadmap di Sviluppo
+1. Migliorare la Configurazione dei Giocatori
+Attualmente, abbiamo una schermata che permette di aggiungere giocatori con un nome e uno stato selezionato. Potremmo migliorare questa parte aggiungendo:
+Limitazione dinamica del numero di giocatori: Magari potresti voler permettere una configurazione dinamica del numero di giocatori.
+Colore del giocatore: Ogni giocatore potrebbe avere un colore specifico, utile per distinguere i giocatori durante il gioco.
+Conferma finale dei giocatori: Prima di iniziare il gioco, mostra un riepilogo della configurazione e permetti di modificare giocatori già aggiunti.
+2. Creare una Mappa Interattiva
+Invece di una lista statica di stati, potremmo usare una mappa interattiva dell'Europa (in formato SVG). La mappa mostrerà gli stati, e ogni giocatore potrà selezionare uno stato toccandolo sulla mappa.
+Passo 1: Ottenere una mappa SVG dell'Europa.
+Passo 2: Utilizzare il pacchetto flutter_svg per visualizzare la mappa e gestire i tocchi degli utenti.
+Passo 3: Associare gli stati selezionati alla configurazione dei giocatori.
+3. Implementare la Logica del Gioco
+Una volta che i giocatori sono stati configurati e hanno selezionato uno stato, il gioco vero e proprio inizia. Potremmo iniziare con:
+Mappa delle città per ogni stato: Dopo che un giocatore ha selezionato uno stato, può scegliere una città da cui partire. Le città possono essere visualizzate su una mappa più dettagliata.
+Turni di gioco: Ogni giocatore può fare una mossa a turno. Gestire la logica di passaggio di turno.
+Espansione del controllo: Gestire la logica di conquista delle città, dove ogni giocatore può tentare di espandere il controllo su altre città.
+Conseguenze delle mosse: Determinare le regole di espansione e come i giocatori possono prendere il controllo delle città.
+4. Gestione del Multiplayer su un Singolo Dispositivo
+Gestire più giocatori su uno stesso dispositivo potrebbe essere abbastanza semplice, dato che ogni giocatore fa la propria mossa e passa il dispositivo al prossimo giocatore.
+Gestione delle informazioni dei turni: Visualizzare chiaramente di chi è il turno e permettere a ciascun giocatore di eseguire le proprie azioni in modo ordinato.
+Visualizzazione dello stato del gioco: Aggiungere un’interfaccia che mostri lo stato attuale del gioco, con informazioni come chi controlla cosa, chi sta vincendo, e altre statistiche.
+5. Condizioni di Vittoria e Punteggio
+Dovremo implementare regole che determinano come si vince il gioco, come:
+Conquista completa di uno stato.
+Eliminazione di tutti i giocatori avversari.
+Condizioni di pareggio (opzionale).
+Implementare un sistema di punteggio che tiene traccia delle città conquistate da ciascun giocatore.
+6. Miglioramenti Grafici e UI
+Aggiungere miglioramenti all'interfaccia utente e alla grafica, come:
+Animazioni per rendere il gioco più fluido e visivamente accattivante.
+Transizioni tra le schermate: Aggiungere animazioni di transizione quando si passa da una schermata all'altra.
+Miglioramenti visivi alle mappe, con marker per le città e uno stile grafico unico.
+7. Debugging e Ottimizzazione
+Testare il gioco a fondo, correggendo bug e ottimizzando le prestazioni. Questo include la gestione efficiente della memoria e il miglioramento della fluidità delle animazioni e delle interazioni con la mappa.
