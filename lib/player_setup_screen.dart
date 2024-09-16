@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'add_player_screen.dart'; // Importiamo la schermata per aggiungere giocatori
-import 'game_screen.dart'; // Importiamo la schermata di gioco
+import 'add_player_screen.dart';
+import 'player.dart'; // Importa la classe Player dal nuovo file
+import 'game_screen.dart';
 
 class PlayerSetupScreen extends StatefulWidget {
-  const PlayerSetupScreen({super.key});
+  const PlayerSetupScreen({Key? key}) : super(key: key);
 
   @override
   _PlayerSetupScreenState createState() => _PlayerSetupScreenState();
@@ -11,7 +12,6 @@ class PlayerSetupScreen extends StatefulWidget {
 
 class _PlayerSetupScreenState extends State<PlayerSetupScreen> {
   List<Player> players = [];
-
   int maxPlayers = 4;
 
   void addPlayer(String name, String country) {
@@ -75,11 +75,4 @@ class _PlayerSetupScreenState extends State<PlayerSetupScreen> {
       ),
     );
   }
-}
-
-class Player {
-  final String name;
-  final String country;
-
-  Player({required this.name, required this.country});
 }

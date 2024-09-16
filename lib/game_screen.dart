@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'player_setup_screen.dart'; // Importa se necessario
+import 'player.dart'; // Importa la classe Player dal nuovo file
 
 class GameScreen extends StatelessWidget {
   final List<Player> players;
 
-  const GameScreen({super.key, required this.players});
+  const GameScreen({Key? key, required this.players}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +12,20 @@ class GameScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Gioco Iniziato'),
       ),
-      body: ListView.builder(
-        itemCount: players.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text('${players[index].name} - Stato: ${players[index].country}'),
-          );
-        },
+      body: Column(
+        children: [
+          const Text('Giocatori in gioco:', style: TextStyle(fontSize: 18)),
+          Expanded(
+            child: ListView.builder(
+              itemCount: players.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text('${players[index].name} - Stato: ${players[index].country}'),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
