@@ -40,3 +40,7 @@ Transizioni tra le schermate: Aggiungere animazioni di transizione quando si pas
 Miglioramenti visivi alle mappe, con marker per le città e uno stile grafico unico.
 7. Debugging e Ottimizzazione
 Testare il gioco a fondo, correggendo bug e ottimizzando le prestazioni. Questo include la gestione efficiente della memoria e il miglioramento della fluidità delle animazioni e delle interazioni con la mappa.
+
+17/09
+L'obbiettivo di oggi sarà risolvere i problemi di selezione stato del giocatore e cercare di avviare lo scenario di gioco. 
+Idealmente le logiche di base per la partita potrebbero essere la parte più rapida. Bisogna concentrarsi sulla parte grafica.
