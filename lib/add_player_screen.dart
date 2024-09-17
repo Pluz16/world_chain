@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'europe_map_screen.dart'; // Assicurati di importare la mappa
+import 'europe_map_screen.dart'; // Assicurati di importare la schermata della mappa
 
 class AddPlayerScreen extends StatefulWidget {
   const AddPlayerScreen({Key? key}) : super(key: key);
@@ -32,10 +32,11 @@ class _AddPlayerScreenState extends State<AddPlayerScreen> {
             // Pulsante per selezionare il paese dalla mappa
             ElevatedButton(
               onPressed: () async {
+                // Naviga alla schermata della mappa per selezionare uno stato
                 final country = await Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const EuropeMapScreen(),
+                    builder: (context) => const GeoJsonMap(), // Schermata con la mappa
                   ),
                 );
                 if (country != null) {
@@ -51,7 +52,7 @@ class _AddPlayerScreenState extends State<AddPlayerScreen> {
             ElevatedButton(
               onPressed: () {
                 if (_nameController.text.isNotEmpty && selectedCountry != null) {
-                  // Ritorna il nome e il paese selezionato
+                  // Ritorna il nome e il paese selezionato alla schermata precedente
                   Navigator.pop(context, {
                     'name': _nameController.text,
                     'country': selectedCountry,

@@ -1,23 +1,25 @@
 name: world_chain
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: 'none' # Rende il pacchetto privato
+
 version: 0.1.0
 
 environment:
-  sdk: ^3.5.3
+  sdk: ">=3.5.0 <4.0.0" # Specifica il range di compatibilità dell'SDK
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^1.0.3
+  flutter_map: ^7.0.2  # Versione aggiornata di flutter_map
+  latlong2: ^0.9.1     # Ultima versione per la gestione delle coordinate geografiche
+  flutter_map_cancellable_tile_provider: ^3.0.2  # Plugin ottimizzato per le tile map
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^4.0.0  # Regole di linting aggiornate per migliorare la qualità del codice
 
 flutter:
   uses-material-design: true
   assets:
-    - assets/europe_map.svg
-
+    - assets/europe.geojson  # Assicurati che il file sia presente nella cartella assets
